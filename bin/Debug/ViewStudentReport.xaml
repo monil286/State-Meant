@@ -1,0 +1,32 @@
+﻿<Window x:Class="Login.ViewStudentReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ViewStudentReport" Height="700" Width="1050" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="E:\StateMent\login_background.png"/>
+        </Grid.Background>
+        <Label Margin="200, 15, 200, 540" Content="State-Meant" Foreground="Khaki" FontStyle="Normal" FontWeight="ExtraBold" FontFamily="Old English Text MT" FontSize="80" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="FNameLbl" Margin="300, 250, 590, 375" Content="First Name : " FontFamily="Comic Sans MS" Foreground="Gold" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="FNameTxt" Margin="450, 250, 450, 380" FontSize="18"  />
+        <Label x:Name="LNameLbl" Margin="310, 300, 590, 325" Content="Last Name : " FontFamily="Comic Sans MS" Foreground="Gold" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
+        <TextBox x:Name="LNameTxt" Margin="450, 300, 450, 330" FontSize="18"  />
+        <Button x:Name="Search" Margin="300, 375, 590, 250" Content="Show Student" Background="BurlyWood" Foreground="Blue" FontFamily="Comic Sans MS" FontSize="20" FontStyle="Italic" FontWeight="Bold" Click="Search_Click"/>
+        <Button x:Name="Back" Margin="500, 375, 400, 250" Content="Back" Background="BurlyWood" Foreground="Blue" FontFamily="Comic Sans MS" FontSize="20" FontStyle="Italic" FontWeight="Bold" Click="Back_Click"/>
+        <Button x:Name="Exit" Margin="700, 375, 200, 250" Content="Exit" Background="BurlyWood" Foreground="Blue" FontFamily="Comic Sans MS" FontSize="20" FontStyle="Italic" FontWeight="Bold" Click="Exit_Click"/>
+        <DataGrid x:Name="StudList" Margin="350, 250, 340, 250" BorderBrush="Gold" AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" Visibility="Hidden" />
+        <DataGrid x:Name="StudScore" Margin="350, 250, 340, 250" BorderBrush="Gold" AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" Visibility="Hidden" />
+        <Button x:Name="Show" Margin="300, 475, 600, 150" Content="Show Report" Background="BurlyWood" Foreground="Blue" FontFamily="Comic Sans MS" FontSize="20" FontStyle="Italic" FontWeight="Bold" Click="Show_Click" Visibility="Hidden"/>
+        <Button x:Name="Back1" Margin="500, 475, 400, 150" Content="Back" Background="BurlyWood" Foreground="Blue" FontFamily="Comic Sans MS" FontSize="20" FontStyle="Italic" FontWeight="Bold" Visibility="Hidden" Click="Back1_Click"/>
+        <Button x:Name="Exit1" Margin="700, 475, 200, 150" Content="Exit" Background="BurlyWood" Foreground="Blue" FontFamily="Comic Sans MS" FontSize="20" FontStyle="Italic" FontWeight="Bold" Visibility="Hidden" Click="Exit1_Click"/>
+    </Grid>
+</Window>

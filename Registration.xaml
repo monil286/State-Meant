@@ -1,0 +1,46 @@
+﻿<Window x:Class="Login.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Registration" Height="700" Width="1050" WindowStartupLocation="CenterScreen" >
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="login_background.png"/>
+        </Grid.Background>
+        <Label Margin="200, 15, 200, 540" Content="State-Meant" Foreground="Khaki" FontStyle="Normal" FontWeight="ExtraBold" FontFamily="Old English Text MT" FontSize="80" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" >
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Margin="385, 150, 560, 482"  Content="First Name :" Foreground="Gold" FontStyle="Normal" FontWeight="Normal" FontFamily="Script MT Bold" FontSize="15" />
+        <TextBox x:Name="F_Name" Margin="490, 150, 460, 490" />
+        <Label Margin="385, 190, 560, 442" Content="Last Name :" Foreground="Gold" FontStyle="Normal" FontWeight="Normal" FontFamily="Script MT Bold" FontSize="15"/>
+        <TextBox x:Name="L_Name" Margin="490, 190, 460, 450" />
+        <Label Margin="338, 230, 560, 402" Content="School ID Number :" Foreground="Gold" FontStyle="Normal" FontWeight="Normal" FontFamily="Script MT Bold" FontSize="15"/>
+        <TextBox x:Name="Id_No" Margin="490, 230, 460, 410" />
+        <Label Margin="368, 270, 560, 362" Content="Select User Id :" Foreground="Gold" FontStyle="Normal" FontWeight="Normal" FontFamily="Script MT Bold" FontSize="15"/>
+        <TextBox Name="User_ID" Margin="490, 270, 360, 370" />
+        <Label Margin="326, 310, 560, 322" Content="Enter E-Mail Address :" Foreground="Gold" FontStyle="Normal" FontWeight="Normal" FontFamily="Script MT Bold" FontSize="15"/>
+        <TextBox Name="Email" Margin="490, 310, 360, 330" />
+        <Label Margin="362, 350, 560, 282" Content="Enter Password :" Foreground="Gold" FontStyle="Normal" FontWeight="Normal" FontFamily="Script MT Bold" FontSize="15"/>
+        <PasswordBox Name="Pass_1" Margin="490, 350, 360, 290"  />
+        <Label Margin="340,390,560,242" Content="Re-Enter Password :" Foreground="Gold" FontStyle="Normal" FontWeight="Normal" FontFamily="Script MT Bold" FontSize="15"/>
+        <PasswordBox Name="Pass_2" Margin="490, 390, 360, 250"  />
+        <Label Margin= "394, 430, 560, 202" Content="You are a :" Foreground="Gold" FontStyle="Normal" FontWeight="Normal" FontFamily="Script MT Bold" FontSize="15"/>
+        <ComboBox x:Name="role" Margin="490, 430, 360, 210" SelectionChanged="role_SelectionChanged">
+            <ComboBoxItem Content="Student"/>
+            <ComboBoxItem Content="Teacher" />
+        </ComboBox>
+        <Label x:Name="Select" Content="Select class :" Margin="390, 470, 560, 162" Foreground="Gold" FontStyle="Normal" FontWeight="Normal" FontFamily="Script MT Bold" FontSize="15" Visibility="Hidden"/>
+        <ComboBox x:Name="class_select" Margin="490, 470, 360, 170" Visibility="Hidden">
+            <ComboBoxItem Content="CPSC 462"/>
+        </ComboBox>
+        <Button Name="reg" Margin="300,523,590,107" Content="Register Me!!!" Click="reg_Click" Background="BurlyWood" FontFamily="comic sans ms" FontSize="18" FontStyle="Italic" FontWeight="Bold" Foreground="Blue" />
+        <Button Name="back" Content="Back" Margin="470, 523, 420, 107" Background="BurlyWood" Foreground="Blue" FontFamily="Comic Sans MS" FontSize="18" FontStyle="Italic" FontWeight="Bold" Click="back_Click"/>
+        <Button Name="Exit" Content="Exit" Margin="640, 523, 250, 107" Background="BurlyWood" Foreground="Blue" FontFamily="Comic Sans MS" FontSize="18" FontStyle="Italic" FontWeight="Bold" Click="Exit_Click"/>
+    </Grid>
+</Window>
